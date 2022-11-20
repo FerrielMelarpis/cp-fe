@@ -19,3 +19,7 @@ Further Improvements
 ##### UI enhancements
 - UI responsiveness could be better
 - Override default styles of mui components to match the design
+##### Testing
+- Missing test for search feature
+  - Can be done via react-testing-library as well
+  - Feature is too small scoped which made me think to prioritize it less while writing the tests.
