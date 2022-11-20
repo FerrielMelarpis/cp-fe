@@ -4,7 +4,7 @@ export const getClients = (): Promise<IClient[]> => {
   return apiClient.get<IClient[]>("clients");
 };
 
-export const createClient = (client: IClient): Promise<void> => {
+export const createClient = (client: NewClient): Promise<void> => {
   return apiClient.post<void>("clients", client);
 };
 

@@ -1,5 +1,5 @@
 import { memo, useContext, useEffect } from "react";
-import { Paper, Typography } from "@mui/material";
+import { Button, Paper, Typography } from "@mui/material";
 import { StateContext } from "../../store/DataProvider";
 import Page from "../../components/Page";
 import ClientTable from "./ClientTable";
@@ -20,6 +20,7 @@ function Clients() {
       <Typography variant="h4" sx={{ textAlign: "start" }}>
         Clients
       </Typography>
+      <Button>Create client</Button>
       <Paper sx={{ margin: "auto", marginTop: 3 }}>
         <ClientTable clients={clients} />
       </Paper>

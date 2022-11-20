@@ -6,6 +6,8 @@ interface IClient {
   phoneNumber: string;
 }
 
+type NewClient = Omit<IClient, 'id'>;
+
 interface IApplicationState {
   clients: IClient[];
 }
