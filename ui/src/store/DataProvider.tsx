@@ -16,8 +16,7 @@ export const StateContext = createContext<{
 export const ACTIONS = {
   FETCH_ALL_CLIENTS: "FETCH_ALL_CLIENTS" as const,
   ADD_CLIENT: "ADD_CLIENT" as const,
-  ADD_NOTIF: "ADD_NOTIF" as const,
-  REMOVE_NOTIF: "REMOVE_NOTIF" as const,
+  SET_NOTIF: "SET_NOTIF" as const,
 };
 
 type Action = {
@@ -32,12 +31,10 @@ const reducer = (state: IApplicationState, action: Action) => {
     case ACTIONS.ADD_CLIENT:
       return {
         ...state,
-        clients: [action.data, ...state.clients]
+        clients: [...state.clients, action.data],
       };
-    case ACTIONS.ADD_NOTIF:
+    case ACTIONS.SET_NOTIF:
       return { ...state, notif: action.data };
-    case ACTIONS.REMOVE_NOTIF:
-      return { ...state, notif: null };
     default:
       return state;
   }
